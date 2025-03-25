@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_Inicial));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnFechar_TelaInicial = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnFechar_TelaInicial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,19 @@
             this.panel1.Size = new System.Drawing.Size(1011, 644);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(41, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 32);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            
+            // 
             // btnFechar_TelaInicial
             // 
             this.btnFechar_TelaInicial.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -58,18 +71,6 @@
             this.btnFechar_TelaInicial.Text = "X";
             this.btnFechar_TelaInicial.UseVisualStyleBackColor = false;
             this.btnFechar_TelaInicial.Click += new System.EventHandler(this.btnFechar_TelaInicial_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(41, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 32);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Tela_Inicial
             // 

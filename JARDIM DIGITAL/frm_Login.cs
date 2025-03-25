@@ -26,9 +26,33 @@ namespace JARDIM_DIGITAL
 
         private void btnEntrarLogin_Click(object sender, EventArgs e)
         {
-           Tela_Inicial tela_Inicial = new Tela_Inicial();
-            tela_Inicial.Show();
-            this.Hide();
+            string nomeUsuario = tbxEmail.Text;
+            string senhaUsuario = tbxSenha.Text;
+
+            if (nomeUsuario == "" || senhaUsuario == "")
+            {
+                MessageBox.Show("Preencha, por favor, o campo do Usuário ou Senha!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DataTable usuario = Usuario.GetUsuario(nomeUsuario, senhaUsuario);
+                // MessageBox.Show(nomeUsuario,"Formuário");
+                //MessageBox.Show(senhaUsuario, "Formulário");
+
+
+                if (usuario.Rows.Count > 0)
+                {
+                    //saber se o Banco de Dados foi Acessado
+
+                    Tela_Inicial tela_Inicial = new Tela_Inicial();
+                    tela_Inicial.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Login não encontrado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnCadastreAqui_Click(object sender, EventArgs e)

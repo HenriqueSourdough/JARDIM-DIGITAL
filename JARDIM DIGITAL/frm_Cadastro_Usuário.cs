@@ -34,12 +34,31 @@ namespace JARDIM_DIGITAL
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            
+            frm_Login frm_Login = new frm_Login();
+            frm_Login.Show();
+            this.Hide();
         }
 
         private void btnEntrarCadastroUsuario_Click(object sender, EventArgs e)
         {
-            
+            if (tbxSenha.Text == tbxConfirmarSenha.Text)
+            { 
+
+
+                Usuario novoUsuario = new Usuario
+                {
+                    Nome = tbxNome.Text,
+                    Senha = tbxSenha.Text,
+                    Email = tbxEmail.Text,
+                };
+
+            novoUsuario.registerUsuario();
+            }
+            else
+            {
+                MessageBox.Show("Senha Incorreta", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
+    
 }

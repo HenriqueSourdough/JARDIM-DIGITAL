@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conn.cs" />
     <Compile Include="frm_Cadastro_Usuário.cs">
       <SubType>Form</SubType>
     </Compile>
