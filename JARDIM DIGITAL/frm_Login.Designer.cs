@@ -43,7 +43,6 @@
             this.btnFechar_Login = new System.Windows.Forms.Button();
             this.tbxNovaSenha = new System.Windows.Forms.TextBox();
             this.lblNovaSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -204,19 +203,11 @@
             this.lblNovaSenha.Text = "Nova Senha";
             this.lblNovaSenha.Visible = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(379, 269);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 29;
-            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 558);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNovaSenha);
             this.Controls.Add(this.tbxNovaSenha);
             this.Controls.Add(this.btnFechar_Login);
@@ -259,6 +250,5 @@
         private System.Windows.Forms.Button btnFechar_Login;
         private System.Windows.Forms.TextBox tbxNovaSenha;
         private System.Windows.Forms.Label lblNovaSenha;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
