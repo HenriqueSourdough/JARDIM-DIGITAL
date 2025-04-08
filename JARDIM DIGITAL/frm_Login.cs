@@ -66,5 +66,49 @@ namespace JARDIM_DIGITAL
         {
             this.Close();
         }
+
+        private void btnRecuperarSenha_Click(object sender, EventArgs e)
+        {
+            lblNovaSenha.Visible = true;
+            tbxNovaSenha.Visible = true;
+
+            Usuario usuarioNovaSenha = new Usuario();
+
+            {
+
+                string email = tbxEmail.Text;
+                string novaSenha = tbxNovaSenha.Text;
+
+                // bool sucesso = Usuario.RecuperaSenhaUsuario();
+
+
+                if (email == "" || novaSenha == "")
+                {
+                    MessageBox.Show("Preencha, por favor, o campo do Usuário ou Senha!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DataTable usuario = Usuario.RecuperaSenhaUsuario(email,novaSenha);
+                    // MessageBox.Show(nomeUsuario,"Formuário");
+                    //MessageBox.Show(senhaUsuario, "Formulário");
+
+
+                    if (usuario.Rows.Count > 0)
+                    {
+                        //saber se o Banco de Dados foi Acessado
+
+                        Tela_Inicial tela_Inicial = new Tela_Inicial();
+                        tela_Inicial.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login não encontrado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+
+        }
+
     }
 }

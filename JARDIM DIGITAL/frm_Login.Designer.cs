@@ -41,6 +41,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnFechar_Login = new System.Windows.Forms.Button();
+            this.tbxNovaSenha = new System.Windows.Forms.TextBox();
+            this.lblNovaSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,7 +52,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(862, 561);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,12 +86,13 @@
             this.btnRecuperarSenha.BackColor = System.Drawing.Color.DarkCyan;
             this.btnRecuperarSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRecuperarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecuperarSenha.Location = new System.Drawing.Point(507, 445);
+            this.btnRecuperarSenha.Location = new System.Drawing.Point(508, 448);
             this.btnRecuperarSenha.Name = "btnRecuperarSenha";
             this.btnRecuperarSenha.Size = new System.Drawing.Size(100, 20);
             this.btnRecuperarSenha.TabIndex = 3;
             this.btnRecuperarSenha.Text = "recuperar senha";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
             // 
             // btnEntrarLogin
             // 
@@ -181,11 +184,32 @@
             this.btnFechar_Login.UseVisualStyleBackColor = false;
             this.btnFechar_Login.Click += new System.EventHandler(this.btnFechar_Login_Click);
             // 
+            // tbxNovaSenha
+            // 
+            this.tbxNovaSenha.Location = new System.Drawing.Point(654, 422);
+            this.tbxNovaSenha.Name = "tbxNovaSenha";
+            this.tbxNovaSenha.Size = new System.Drawing.Size(100, 20);
+            this.tbxNovaSenha.TabIndex = 27;
+            this.tbxNovaSenha.Visible = false;
+            // 
+            // lblNovaSenha
+            // 
+            this.lblNovaSenha.AutoSize = true;
+            this.lblNovaSenha.BackColor = System.Drawing.Color.Teal;
+            this.lblNovaSenha.Location = new System.Drawing.Point(669, 403);
+            this.lblNovaSenha.Name = "lblNovaSenha";
+            this.lblNovaSenha.Size = new System.Drawing.Size(67, 13);
+            this.lblNovaSenha.TabIndex = 28;
+            this.lblNovaSenha.Text = "Nova Senha";
+            this.lblNovaSenha.Visible = false;
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 558);
+            this.Controls.Add(this.lblNovaSenha);
+            this.Controls.Add(this.tbxNovaSenha);
             this.Controls.Add(this.btnFechar_Login);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
@@ -224,5 +248,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnFechar_Login;
+        private System.Windows.Forms.TextBox tbxNovaSenha;
+        private System.Windows.Forms.Label lblNovaSenha;
     }
 }

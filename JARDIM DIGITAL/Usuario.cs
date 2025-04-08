@@ -17,6 +17,7 @@ namespace JARDIM_DIGITAL
         public string Senha { get; set; }
         public string Email { get; set; }
         public string CEP { get; set; }
+        public string NovaSenha {  get; set; }
 
         public static DataTable GetUsuario(string Email, string senha)
         {
@@ -92,6 +93,43 @@ namespace JARDIM_DIGITAL
             }
             return false;
         }
+
+        public static DataTable RecuperaSenhaUsuario(string email, string novaSenha)
+        {
+            var dt = new DataTable();
+            var sql = "UPDATE usuarios SET Senha =  @NovaSenha WHERE Email = @Email";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conn.conn))
+                {
+                    cn.Open();
+
+                    using(var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@NovaSenha", novaSenha);
+
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Senha redefinida com sucesso!","Recuperação de Senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("E-mail não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (MySqlException erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            return dt;
+        }
+            
     }
 }
 

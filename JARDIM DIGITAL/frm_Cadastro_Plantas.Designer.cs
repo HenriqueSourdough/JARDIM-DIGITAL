@@ -78,6 +78,7 @@
             this.btnCriarPlanta.TabIndex = 1;
             this.btnCriarPlanta.Text = "CRIAR CADASTRO";
             this.btnCriarPlanta.UseVisualStyleBackColor = false;
+            this.btnCriarPlanta.Click += new System.EventHandler(this.btnCriarPlanta_Click);
             // 
             // btnLerTabela
             // 
