@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnFechar_TelaInicial = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnFechar_TelaInicial);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
@@ -57,7 +59,6 @@
             this.button1.Size = new System.Drawing.Size(41, 32);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
-            
             // 
             // btnFechar_TelaInicial
             // 
@@ -71,6 +72,15 @@
             this.btnFechar_TelaInicial.Text = "X";
             this.btnFechar_TelaInicial.UseVisualStyleBackColor = false;
             this.btnFechar_TelaInicial.Click += new System.EventHandler(this.btnFechar_TelaInicial_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(462, 443);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 53);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Tela_Inicial
             // 
@@ -91,5 +101,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFechar_TelaInicial;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
