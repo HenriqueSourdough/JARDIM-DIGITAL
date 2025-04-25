@@ -43,6 +43,7 @@
             this.btnFechar_Login = new System.Windows.Forms.Button();
             this.tbxNovaSenha = new System.Windows.Forms.TextBox();
             this.lblNovaSenha = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -122,6 +123,7 @@
             this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(100, 20);
             this.tbxSenha.TabIndex = 6;
+          
             // 
             // btnCadastreAqui
             // 
@@ -132,7 +134,7 @@
             this.btnCadastreAqui.Name = "btnCadastreAqui";
             this.btnCadastreAqui.Size = new System.Drawing.Size(143, 23);
             this.btnCadastreAqui.TabIndex = 7;
-            this.btnCadastreAqui.Text = "CADASTRE-SE AQUI";
+            this.btnCadastreAqui.Text = "CADASTRE-SE";
             this.btnCadastreAqui.UseVisualStyleBackColor = false;
             this.btnCadastreAqui.Click += new System.EventHandler(this.btnCadastreAqui_Click);
             // 
@@ -188,6 +190,7 @@
             // 
             this.tbxNovaSenha.Location = new System.Drawing.Point(654, 422);
             this.tbxNovaSenha.Name = "tbxNovaSenha";
+            this.tbxNovaSenha.PasswordChar = '*';
             this.tbxNovaSenha.Size = new System.Drawing.Size(100, 20);
             this.tbxNovaSenha.TabIndex = 27;
             this.tbxNovaSenha.Visible = false;
@@ -203,11 +206,25 @@
             this.lblNovaSenha.Text = "Nova Senha";
             this.lblNovaSenha.Visible = false;
             // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.Teal;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.Location = new System.Drawing.Point(760, 421);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(36, 20);
+            this.btnOK.TabIndex = 29;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Visible = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 558);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblNovaSenha);
             this.Controls.Add(this.tbxNovaSenha);
             this.Controls.Add(this.btnFechar_Login);
@@ -250,5 +267,6 @@
         private System.Windows.Forms.Button btnFechar_Login;
         private System.Windows.Forms.TextBox tbxNovaSenha;
         private System.Windows.Forms.Label lblNovaSenha;
+        private System.Windows.Forms.Button btnOK;
     }
 }
