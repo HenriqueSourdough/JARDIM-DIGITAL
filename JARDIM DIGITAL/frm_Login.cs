@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JARDIM_DIGITAL
 {
@@ -71,6 +72,7 @@ namespace JARDIM_DIGITAL
         {
             lblNovaSenha.Visible = true;
             tbxNovaSenha.Visible = true;
+            btnOK.Visible = true;
 
             Usuario usuarioNovaSenha = new Usuario();
 
@@ -82,33 +84,58 @@ namespace JARDIM_DIGITAL
                 // bool sucesso = Usuario.RecuperaSenhaUsuario();
 
 
-                if (email == "" || novaSenha == "")
+                if (email == "")
                 {
-                    MessageBox.Show("Preencha, por favor, o campo do Usuário ou Senha!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Preencha, por favor, o campo do Usuário!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DataTable usuario = Usuario.RecuperaSenhaUsuario(email,novaSenha);
-                    // MessageBox.Show(nomeUsuario,"Formuário");
-                    //MessageBox.Show(senhaUsuario, "Formulário");
+                    tbxNovaSenha.Focus();
 
 
-                    if (usuario.Rows.Count > 0)
-                    {
-                        //saber se o Banco de Dados foi Acessado
 
-                        Tela_Inicial tela_Inicial = new Tela_Inicial();
-                        tela_Inicial.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Login não encontrado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+
                 }
             }
 
         }
+        private void tbxSenha_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+
+        {
+            string email = tbxEmail.Text;
+            string novaSenha = tbxNovaSenha.Text;
+            if (novaSenha != "")
+            {
+
+
+                DataTable usuario = Usuario.RecuperaSenhaUsuario(email, novaSenha);
+                // MessageBox.Show(nomeUsuario,"Formuário");
+                //MessageBox.Show(senhaUsuario, "Formulário");
+
+
+                if (usuario.Rows.Count > 0)
+                {
+                    //saber se o Banco de Dados foi Acessado
+
+                    Tela_Inicial tela_Inicial = new Tela_Inicial();
+                    tela_Inicial.Show();
+                    this.Hide();
+
+                    lblNovaSenha.Visible = false;
+                    tbxNovaSenha.Visible = false;
+                    btnOK.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Por Favor Cadastra-se", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                }
+            }
+        }
     }
 }
