@@ -30,35 +30,76 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_Inicial));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCatalogoPlantas = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnMenuInicial = new System.Windows.Forms.Button();
             this.btnFechar_TelaInicial = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnCatalogoPlantas);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.btnMenuInicial);
             this.panel1.Controls.Add(this.btnFechar_TelaInicial);
-            this.panel1.Location = new System.Drawing.Point(-2, -1);
+            this.panel1.Location = new System.Drawing.Point(-2, -12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1011, 644);
+            this.panel1.Size = new System.Drawing.Size(1021, 655);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(41, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 32);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(860, 505);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 99);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCatalogoPlantas
+            // 
+            this.btnCatalogoPlantas.BackColor = System.Drawing.Color.Teal;
+            this.btnCatalogoPlantas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCatalogoPlantas.BackgroundImage")));
+            this.btnCatalogoPlantas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCatalogoPlantas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCatalogoPlantas.Location = new System.Drawing.Point(365, 472);
+            this.btnCatalogoPlantas.Name = "btnCatalogoPlantas";
+            this.btnCatalogoPlantas.Size = new System.Drawing.Size(58, 46);
+            this.btnCatalogoPlantas.TabIndex = 4;
+            this.btnCatalogoPlantas.UseVisualStyleBackColor = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Teal;
+            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(268, 472);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(58, 46);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuInicial
+            // 
+            this.btnMenuInicial.BackColor = System.Drawing.Color.Teal;
+            this.btnMenuInicial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuInicial.BackgroundImage")));
+            this.btnMenuInicial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMenuInicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuInicial.Location = new System.Drawing.Point(477, 472);
+            this.btnMenuInicial.Name = "btnMenuInicial";
+            this.btnMenuInicial.Size = new System.Drawing.Size(58, 46);
+            this.btnMenuInicial.TabIndex = 2;
+            this.btnMenuInicial.UseVisualStyleBackColor = false;
+            this.btnMenuInicial.Click += new System.EventHandler(this.btnMenuInicial_Click);
             // 
             // btnFechar_TelaInicial
             // 
@@ -73,15 +114,6 @@
             this.btnFechar_TelaInicial.UseVisualStyleBackColor = false;
             this.btnFechar_TelaInicial.Click += new System.EventHandler(this.btnFechar_TelaInicial_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(462, 443);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 53);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Tela_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +124,7 @@
             this.Name = "Tela_Inicial";
             this.Text = "Tela_Inicial";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,7 +133,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFechar_TelaInicial;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMenuInicial;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCatalogoPlantas;
     }
 }
