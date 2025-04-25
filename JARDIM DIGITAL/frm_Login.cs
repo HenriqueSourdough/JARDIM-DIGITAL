@@ -99,10 +99,7 @@ namespace JARDIM_DIGITAL
             }
 
         }
-        private void tbxSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnOK_Click(object sender, EventArgs e)
 
@@ -118,23 +115,16 @@ namespace JARDIM_DIGITAL
                 //MessageBox.Show(senhaUsuario, "Formulário");
 
 
-                if (usuario.Rows.Count > 0)
-                {
-                    //saber se o Banco de Dados foi Acessado
+                
 
-                    Tela_Inicial tela_Inicial = new Tela_Inicial();
-                    tela_Inicial.Show();
+                    frm_Login frm_Login = new frm_Login();
+                   frm_Login.Show();
                     this.Hide();
 
                     lblNovaSenha.Visible = false;
                     tbxNovaSenha.Visible = false;
-                    btnOK.Visible = false;
-                }
-                else
-                {
-                    MessageBox.Show("Por Favor Cadastra-se", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
-                }
+                btnOK.Visible = false;
+               
             }
         }
     }

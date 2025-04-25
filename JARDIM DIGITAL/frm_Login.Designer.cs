@@ -123,7 +123,7 @@
             this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(100, 20);
             this.tbxSenha.TabIndex = 6;
-            this.tbxSenha.TextChanged += new System.EventHandler(this.tbxSenha_TextChanged);
+          
             // 
             // btnCadastreAqui
             // 
@@ -134,7 +134,7 @@
             this.btnCadastreAqui.Name = "btnCadastreAqui";
             this.btnCadastreAqui.Size = new System.Drawing.Size(143, 23);
             this.btnCadastreAqui.TabIndex = 7;
-            this.btnCadastreAqui.Text = "CADASTRE-SE AQUI";
+            this.btnCadastreAqui.Text = "CADASTRE-SE";
             this.btnCadastreAqui.UseVisualStyleBackColor = false;
             this.btnCadastreAqui.Click += new System.EventHandler(this.btnCadastreAqui_Click);
             // 
