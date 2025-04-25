@@ -49,7 +49,7 @@ namespace JARDIM_DIGITAL
                 CATEGORIA = tbxCategoriaPlanta.Text,
 
             };
-            plantaAtualizada.updatePlantas();
+            plantaAtualizada.updatePlanta();
         }
     }
 }

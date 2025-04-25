@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCatalogoPlantas = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.btnMenuInicial = new System.Windows.Forms.Button();
             this.btnFechar_TelaInicial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -45,7 +44,6 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnCatalogoPlantas);
-            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnMenuInicial);
             this.panel1.Controls.Add(this.btnFechar_TelaInicial);
             this.panel1.Location = new System.Drawing.Point(-2, -12);
@@ -74,19 +72,6 @@
             this.btnCatalogoPlantas.Size = new System.Drawing.Size(58, 46);
             this.btnCatalogoPlantas.TabIndex = 4;
             this.btnCatalogoPlantas.UseVisualStyleBackColor = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Teal;
-            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(268, 472);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(58, 46);
-            this.btnHome.TabIndex = 3;
-            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // btnMenuInicial
             // 
@@ -134,7 +119,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFechar_TelaInicial;
         private System.Windows.Forms.Button btnMenuInicial;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCatalogoPlantas;
     }

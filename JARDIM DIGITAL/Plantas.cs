@@ -74,8 +74,8 @@ namespace JARDIM_DIGITAL
                         cmd.Parameters.AddWithValue("@NomeCientifico", this.NOME_CIENTIFICO);
                         cmd.Parameters.AddWithValue("@Descricao", this.DESC_PLANTA);
                         cmd.Parameters.AddWithValue("@Cuidado", this.CUIDADO);
-                        cmd.Parameters.AddWithValue("@Categoria", CATEGORIA);
-                        cmd.Parameters.AddWithValue("@LinkImagem", IMAGEMPLANTA);
+                        cmd.Parameters.AddWithValue("@Categoria",this. CATEGORIA);
+                        cmd.Parameters.AddWithValue("@LinkImagem", this.IMAGEMPLANTA);
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
@@ -142,27 +142,30 @@ namespace JARDIM_DIGITAL
                 return false;
             }
 
-            string sql = "UPDATE plantas SET NOME_PLANTA = @NomePlanta , NOME_CIENTIFICO = @Senha WHERE USU_IDUsuario = @IDUsuario";
+            string sql = "UPDATE plantas SET NOME_PLANTA = @NomePlanta , NOME_CIENTIFICO = @NomeCientifico , DESC_PLANTA = @Descricao , CUIDADO = @Cuidado , CATEGORIA = @Categoria , @LinkImagem = IMAGEMPLANTA ";
 
             try
             {
 
-                using (var cn = new MySqlConnection(Conn.strConn))
+                using (var cn = new MySqlConnection(Conn.conn))
                 {
                     cn.Open();
 
                     using (var cmd = new MySqlCommand(sql, cn))
                     {
-                        cmd.Parameters.AddWithValue("@Nome", this.Nome);
-                        cmd.Parameters.AddWithValue("@Senha", this.Senha);
-                        cmd.Parameters.AddWithValue("@IDUsuario", this.IDUsuario);
+                        cmd.Parameters.AddWithValue("@NomePlanta", this.NOME_PLANTA);
+                        cmd.Parameters.AddWithValue("@NomeCientifico", this.NOME_CIENTIFICO);
+                        cmd.Parameters.AddWithValue("@Descricao", this.DESC_PLANTA);
+                        cmd.Parameters.AddWithValue("@Cuidado", this.CUIDADO);
+                        cmd.Parameters.AddWithValue("@Categoria", this.CATEGORIA);
+                        cmd.Parameters.AddWithValue("@LinkImagem", this.IMAGEMPLANTA);
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         //ExecuteNonQuery -> quantidade de linhas afetadas
 
                         if (linhasAfetadas > 0)
                         {
-                            MessageBox.Show("Usuário atualizado com sucesso", "Atualização de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Planta atualizada com sucesso", "Atualização de Plantas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
                         }
                     }
