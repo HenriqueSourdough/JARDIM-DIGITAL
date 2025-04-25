@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAByoAAAQLCAYAAADURy5YAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAA/7JJREFUeF7s/feXHNeVYI3ezIgsgGR/730z8+a9b6Z71GqvbnlLSRS9EylKohMt
+        vAAADrwBlbxySQAA/7JJREFUeF7s/feXHNeVYI3ezIgsgGR/730z8+a9b6Z71GqvbnlLSRS9EylKohMt
         ABrYqgLKwoPwruC9B+hBb9V/4HnrXBNx7rnnRtzIjCxC6vxhr5MZGZlZVWD3rDW79z3ql3c9ACNGjBgx
         YsSIESNGjBgxYsSIESNGjBgxYsSIESNGjBixmCh+YcSIESNGjBgxYsSIESNGjBgxYsSIESNGjBgxYsSI
         ESOGzUhUjhgxYsSIESNGjBgxYsSIESNGjBgxYsSIESNGjBgxYtEZicoRI0aMGDFixIgRI0aMGDFixIgR
@@ -22687,10 +22687,10 @@
         UgZwa0qNKCqT25TujUojHftKiMrS/IOekJOmpGynqPz/ADBMMv+PKk4tAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCadastrarPlantas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABLdSURBVHhe7d1v
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABLdSURBVHhe7d1v
         yKV5Xcfxj+4M5SJtKZRr0Ram+EQKQVjJBwUabeRG2WpuuYaQkUE9sTQoEiQkCNMUIqHQVZPE1sQ0SSsx
         +4uUZZE9ych22f5Yumrt/+Jq721nf3vNzP3nnO/5Xtf1esH7SZA795kz+/le556ZTQAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -22774,10 +22774,10 @@
         AAAAAAAAAAAAAAAAAAAAAGDe/wIRdSLL97GjWAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtualizarCadastroPlantas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC5DSURBVHhe7d15
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC5DSURBVHhe7d15
         3K1zvf/xt2kbMstMQkIoGeOQoxQJB+Wnc9LoHIcUlUoaDiUdFcWvEkVlSCc6iDgiUkSDzESSkHkeN9vw
         +z0+7e993PuzP/d9r7Xuda91Xd/P6/l4vP5Rtr2+17Wu73etdQ0SgKabT9Lykl4t6Q2SdpX0AUmflXSk
         pO9IOkXSTySdL+k3kv4g6RZJd0h6aFTTJf2/cXq4/P/s3/2zpMsl/a78ueeW/853JR0m6VOS9ip/nzdJ
@@ -22978,10 +22978,10 @@
         S3pVuYpiHv8CADTL/wffpaG8axIR8QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDeletarCadastroPlanta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAChFSURBVHhe7d15
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAChFSURBVHhe7d15
         sG11eebxB5BBbUccUFsZlEbBqGkCaVMKmE4c4oATGjPYrTHgjDHl0JpWqS5TGtRIp1WMsVoRwQSNUVQU
         J5KIaMR5DIgoRsRSGZRRhu56ZeE1D7/LPeeeab/r+X6qvv/CWuu867d/95y995IArJbbSfo1SY+R9FxJ
         R0l6p6QPSzpV0umSzpL0b5LOl3SVpP8X3pXTtahrUtemrtEnpmtW166u4Z9M17Su7W39ogMAsF52lvQg

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace JARDIM_DIGITAL
 {
-    internal class Plantas
+    public class Plantas
     {
         public int ID_PLANTA { get; set; }
         public string NOME_PLANTA { get; set; }
@@ -58,7 +58,7 @@ namespace JARDIM_DIGITAL
             return dt;
         }
 
-        public bool registerUsuario()
+        public bool registerPlanta()
         {
             var sql = "INSERT INTO plantas(NOME_PLANTA, NOME_CIENTIFICO, DESC_PLANTA, CUIDADO, CATEGORIA, IMAGEMPLANTA) VALUES (@NomePlanta, @NomeCientifico, @Descricao, @Cuidado, @Categoria,@LinkImagem)";
 
@@ -132,11 +132,51 @@ namespace JARDIM_DIGITAL
             }
 
             return false;
-
-
-            
+                        
         }
+        public bool updatePlanta()
+        {
+            if (this.ID_PLANTA == 0)
+            {
+                MessageBox.Show("id inválido", "updatePlanta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
+            string sql = "UPDATE plantas SET NOME_PLANTA = @NomePlanta , NOME_CIENTIFICO = @Senha WHERE USU_IDUsuario = @IDUsuario";
+
+            try
+            {
+
+                using (var cn = new MySqlConnection(Conn.strConn))
+                {
+                    cn.Open();
+
+                    using (var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@Nome", this.Nome);
+                        cmd.Parameters.AddWithValue("@Senha", this.Senha);
+                        cmd.Parameters.AddWithValue("@IDUsuario", this.IDUsuario);
+
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        //ExecuteNonQuery -> quantidade de linhas afetadas
+
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Usuário atualizado com sucesso", "Atualização de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                    }
+
+                }
+            }
+
+            catch (MySqlException erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            return false;
+
+        }
     }
  }
 
