@@ -46,6 +46,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnFechar_CadastroUsuario = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -57,7 +59,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-6, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-16, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(946, 584);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +150,7 @@
             this.btnEntrarCadastroUsuario.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEntrarCadastroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrarCadastroUsuario.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrarCadastroUsuario.Location = new System.Drawing.Point(246, 492);
+            this.btnEntrarCadastroUsuario.Location = new System.Drawing.Point(379, 451);
             this.btnEntrarCadastroUsuario.Name = "btnEntrarCadastroUsuario";
             this.btnEntrarCadastroUsuario.Size = new System.Drawing.Size(114, 23);
             this.btnEntrarCadastroUsuario.TabIndex = 17;
@@ -161,7 +163,7 @@
             this.btnLoginCadastro.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnLoginCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoginCadastro.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginCadastro.Location = new System.Drawing.Point(526, 492);
+            this.btnLoginCadastro.Location = new System.Drawing.Point(233, 511);
             this.btnLoginCadastro.Name = "btnLoginCadastro";
             this.btnLoginCadastro.Size = new System.Drawing.Size(84, 23);
             this.btnLoginCadastro.TabIndex = 18;
@@ -237,11 +239,37 @@
             this.btnFechar_CadastroUsuario.UseVisualStyleBackColor = false;
             this.btnFechar_CadastroUsuario.Click += new System.EventHandler(this.btnFechar_CadastroUsuario_Click);
             // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeletar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(379, 511);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(100, 23);
+            this.btnDeletar.TabIndex = 25;
+            this.btnDeletar.Text = "DELETAR";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtualizar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(536, 511);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(115, 23);
+            this.btnAtualizar.TabIndex = 26;
+            this.btnAtualizar.Text = "ATUALIZAR";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            // 
             // frm_Cadastro_Usuário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 583);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnFechar_CadastroUsuario);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -291,5 +319,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnFechar_CadastroUsuario;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

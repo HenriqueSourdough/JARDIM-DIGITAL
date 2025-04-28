@@ -59,6 +59,15 @@ namespace JARDIM_DIGITAL
                 MessageBox.Show("Senha Incorreta", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            Usuario usuarioDeletado = new Usuario
+            {
+              Email = tbxEmail.Text
+            };
+            usuarioDeletado.deleteUsuario();
+        }
     }
     
 }
