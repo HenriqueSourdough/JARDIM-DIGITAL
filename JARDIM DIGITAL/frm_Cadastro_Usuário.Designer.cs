@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cadastro_Usuário));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.lblConfirmarSenha = new System.Windows.Forms.Label();
+            this.tbxSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.tbxNome = new System.Windows.Forms.TextBox();
             this.btnEntrarCadastroUsuario = new System.Windows.Forms.Button();
             this.btnLoginCadastro = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,6 +46,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnFechar_CadastroUsuario = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -57,96 +59,98 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-6, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-16, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(946, 584);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox4
+            // tbxConfirmarSenha
             // 
-            this.textBox4.BackColor = System.Drawing.Color.MintCream;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(594, 417);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 13);
-            this.textBox4.TabIndex = 15;
+            this.tbxConfirmarSenha.BackColor = System.Drawing.Color.MintCream;
+            this.tbxConfirmarSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxConfirmarSenha.Location = new System.Drawing.Point(594, 417);
+            this.tbxConfirmarSenha.Name = "tbxConfirmarSenha";
+            this.tbxConfirmarSenha.PasswordChar = '*';
+            this.tbxConfirmarSenha.Size = new System.Drawing.Size(100, 13);
+            this.tbxConfirmarSenha.TabIndex = 15;
             // 
-            // label4
+            // lblConfirmarSenha
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(594, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Confirmar Senha";
+            this.lblConfirmarSenha.AutoSize = true;
+            this.lblConfirmarSenha.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(594, 401);
+            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
+            this.lblConfirmarSenha.Size = new System.Drawing.Size(85, 13);
+            this.lblConfirmarSenha.TabIndex = 14;
+            this.lblConfirmarSenha.Text = "Confirmar Senha";
             // 
-            // textBox3
+            // tbxSenha
             // 
-            this.textBox3.BackColor = System.Drawing.Color.MintCream;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(233, 417);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 13);
-            this.textBox3.TabIndex = 13;
+            this.tbxSenha.BackColor = System.Drawing.Color.MintCream;
+            this.tbxSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxSenha.Location = new System.Drawing.Point(233, 417);
+            this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.PasswordChar = '*';
+            this.tbxSenha.Size = new System.Drawing.Size(100, 13);
+            this.tbxSenha.TabIndex = 13;
             // 
-            // label3
+            // lblSenha
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(233, 401);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Criar Senha";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSenha.Location = new System.Drawing.Point(233, 401);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(38, 13);
+            this.lblSenha.TabIndex = 12;
+            this.lblSenha.Text = "Senha";
             // 
-            // textBox2
+            // tbxEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.MintCream;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(594, 358);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 13);
-            this.textBox2.TabIndex = 11;
+            this.tbxEmail.BackColor = System.Drawing.Color.MintCream;
+            this.tbxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxEmail.Location = new System.Drawing.Point(594, 358);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(100, 13);
+            this.tbxEmail.TabIndex = 11;
             // 
-            // label2
+            // lblEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(595, 342);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "E-mail";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblEmail.Location = new System.Drawing.Point(595, 342);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.TabIndex = 10;
+            this.lblEmail.Text = "E-mail";
             // 
-            // label1
+            // lblNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(233, 342);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblNome.Location = new System.Drawing.Point(233, 342);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.TabIndex = 8;
+            this.lblNome.Text = "Nome";
+            this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox1
+            // tbxNome
             // 
-            this.textBox1.BackColor = System.Drawing.Color.MintCream;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(233, 358);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 13);
-            this.textBox1.TabIndex = 16;
+            this.tbxNome.BackColor = System.Drawing.Color.MintCream;
+            this.tbxNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxNome.Location = new System.Drawing.Point(233, 358);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(100, 13);
+            this.tbxNome.TabIndex = 16;
             // 
             // btnEntrarCadastroUsuario
             // 
             this.btnEntrarCadastroUsuario.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEntrarCadastroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrarCadastroUsuario.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrarCadastroUsuario.Location = new System.Drawing.Point(246, 492);
+            this.btnEntrarCadastroUsuario.Location = new System.Drawing.Point(379, 451);
             this.btnEntrarCadastroUsuario.Name = "btnEntrarCadastroUsuario";
             this.btnEntrarCadastroUsuario.Size = new System.Drawing.Size(114, 23);
             this.btnEntrarCadastroUsuario.TabIndex = 17;
@@ -159,7 +163,7 @@
             this.btnLoginCadastro.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnLoginCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoginCadastro.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginCadastro.Location = new System.Drawing.Point(526, 492);
+            this.btnLoginCadastro.Location = new System.Drawing.Point(233, 511);
             this.btnLoginCadastro.Name = "btnLoginCadastro";
             this.btnLoginCadastro.Size = new System.Drawing.Size(84, 23);
             this.btnLoginCadastro.TabIndex = 18;
@@ -235,11 +239,37 @@
             this.btnFechar_CadastroUsuario.UseVisualStyleBackColor = false;
             this.btnFechar_CadastroUsuario.Click += new System.EventHandler(this.btnFechar_CadastroUsuario_Click);
             // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeletar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(379, 511);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(100, 23);
+            this.btnDeletar.TabIndex = 25;
+            this.btnDeletar.Text = "DELETAR";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtualizar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(536, 511);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(115, 23);
+            this.btnAtualizar.TabIndex = 26;
+            this.btnAtualizar.Text = "ATUALIZAR";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            // 
             // frm_Cadastro_Usuário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 583);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnFechar_CadastroUsuario);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -248,14 +278,14 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLoginCadastro);
             this.Controls.Add(this.btnEntrarCadastroUsuario);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbxNome);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.tbxConfirmarSenha);
+            this.Controls.Add(this.lblConfirmarSenha);
+            this.Controls.Add(this.tbxSenha);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.tbxEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Cadastro_Usuário";
@@ -272,14 +302,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxConfirmarSenha;
+        private System.Windows.Forms.Label lblConfirmarSenha;
+        private System.Windows.Forms.TextBox tbxSenha;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox tbxNome;
         private System.Windows.Forms.Button btnEntrarCadastroUsuario;
         private System.Windows.Forms.Button btnLoginCadastro;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -289,5 +319,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnFechar_CadastroUsuario;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace JARDIM_DIGITAL
 {
-    public partial class Tela_Inicial : Form
+    public partial class Form1 : Form
     {
-        public Tela_Inicial()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnFechar_TelaInicial_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMenuInicial_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

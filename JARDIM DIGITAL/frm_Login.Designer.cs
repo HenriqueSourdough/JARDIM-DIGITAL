@@ -30,17 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.btnRecuperarSenha = new System.Windows.Forms.Button();
             this.btnEntrarLogin = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxSenha = new System.Windows.Forms.TextBox();
             this.btnCadastreAqui = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnFechar_Login = new System.Windows.Forms.Button();
+            this.tbxNovaSenha = new System.Windows.Forms.TextBox();
+            this.lblNovaSenha = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,53 +53,54 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(862, 561);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkCyan;
-            this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(302, 403);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "E-MAIL";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblEmail.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(302, 403);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(56, 16);
+            this.lblEmail.TabIndex = 1;
+            this.lblEmail.Text = "E-MAIL";
             // 
-            // label2
+            // lblSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkCyan;
-            this.label2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(517, 403);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "SENHA";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSenha.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(517, 403);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(52, 16);
+            this.lblSenha.TabIndex = 2;
+            this.lblSenha.Text = "SENHA";
             // 
             // btnRecuperarSenha
             // 
             this.btnRecuperarSenha.BackColor = System.Drawing.Color.DarkCyan;
             this.btnRecuperarSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRecuperarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecuperarSenha.Location = new System.Drawing.Point(507, 445);
+            this.btnRecuperarSenha.Location = new System.Drawing.Point(508, 448);
             this.btnRecuperarSenha.Name = "btnRecuperarSenha";
             this.btnRecuperarSenha.Size = new System.Drawing.Size(100, 20);
             this.btnRecuperarSenha.TabIndex = 3;
             this.btnRecuperarSenha.Text = "recuperar senha";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
             // 
             // btnEntrarLogin
             // 
             this.btnEntrarLogin.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEntrarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrarLogin.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrarLogin.Location = new System.Drawing.Point(381, 490);
+            this.btnEntrarLogin.Location = new System.Drawing.Point(385, 490);
             this.btnEntrarLogin.Name = "btnEntrarLogin";
             this.btnEntrarLogin.Size = new System.Drawing.Size(117, 27);
             this.btnEntrarLogin.TabIndex = 4;
@@ -104,20 +108,22 @@
             this.btnEntrarLogin.UseVisualStyleBackColor = false;
             this.btnEntrarLogin.Click += new System.EventHandler(this.btnEntrarLogin_Click);
             // 
-            // textBox1
+            // tbxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 422);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbxEmail.Location = new System.Drawing.Point(287, 422);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbxEmail.TabIndex = 5;
             // 
-            // textBox2
+            // tbxSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(508, 422);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.tbxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSenha.Location = new System.Drawing.Point(508, 422);
+            this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.PasswordChar = '*';
+            this.tbxSenha.Size = new System.Drawing.Size(100, 20);
+            this.tbxSenha.TabIndex = 6;
+          
             // 
             // btnCadastreAqui
             // 
@@ -128,7 +134,7 @@
             this.btnCadastreAqui.Name = "btnCadastreAqui";
             this.btnCadastreAqui.Size = new System.Drawing.Size(143, 23);
             this.btnCadastreAqui.TabIndex = 7;
-            this.btnCadastreAqui.Text = "CADASTRE-SE AQUI";
+            this.btnCadastreAqui.Text = "CADASTRE-SE";
             this.btnCadastreAqui.UseVisualStyleBackColor = false;
             this.btnCadastreAqui.Click += new System.EventHandler(this.btnCadastreAqui_Click);
             // 
@@ -180,22 +186,58 @@
             this.btnFechar_Login.UseVisualStyleBackColor = false;
             this.btnFechar_Login.Click += new System.EventHandler(this.btnFechar_Login_Click);
             // 
+            // tbxNovaSenha
+            // 
+            this.tbxNovaSenha.Location = new System.Drawing.Point(654, 422);
+            this.tbxNovaSenha.Name = "tbxNovaSenha";
+            this.tbxNovaSenha.PasswordChar = '*';
+            this.tbxNovaSenha.Size = new System.Drawing.Size(100, 20);
+            this.tbxNovaSenha.TabIndex = 27;
+            this.tbxNovaSenha.Visible = false;
+            // 
+            // lblNovaSenha
+            // 
+            this.lblNovaSenha.AutoSize = true;
+            this.lblNovaSenha.BackColor = System.Drawing.Color.Teal;
+            this.lblNovaSenha.Location = new System.Drawing.Point(669, 403);
+            this.lblNovaSenha.Name = "lblNovaSenha";
+            this.lblNovaSenha.Size = new System.Drawing.Size(67, 13);
+            this.lblNovaSenha.TabIndex = 28;
+            this.lblNovaSenha.Text = "Nova Senha";
+            this.lblNovaSenha.Visible = false;
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.Teal;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.Location = new System.Drawing.Point(760, 421);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(36, 20);
+            this.btnOK.TabIndex = 29;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Visible = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 558);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.lblNovaSenha);
+            this.Controls.Add(this.tbxNovaSenha);
             this.Controls.Add(this.btnFechar_Login);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.btnCadastreAqui);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxSenha);
+            this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.btnEntrarLogin);
             this.Controls.Add(this.btnRecuperarSenha);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Login";
@@ -212,16 +254,19 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnRecuperarSenha;
         private System.Windows.Forms.Button btnEntrarLogin;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.TextBox tbxSenha;
         private System.Windows.Forms.Button btnCadastreAqui;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnFechar_Login;
+        private System.Windows.Forms.TextBox tbxNovaSenha;
+        private System.Windows.Forms.Label lblNovaSenha;
+        private System.Windows.Forms.Button btnOK;
     }
 }
