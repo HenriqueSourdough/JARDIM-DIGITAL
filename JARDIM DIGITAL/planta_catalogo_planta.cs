@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace JARDIM_DIGITAL
 {
-    public partial class Form1 : Form
+    public partial class planta_catalogo_planta : Form
     {
-        public Form1()
+        public planta_catalogo_planta()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
