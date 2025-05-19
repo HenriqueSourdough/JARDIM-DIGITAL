@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JARDIM_DIGITAL
 {
@@ -129,16 +130,41 @@ namespace JARDIM_DIGITAL
             }
             return dt;
         }
-        public static DataTable DeletarUsuario(string email)
+        public static DataTable DeletarUsuario(string Email, string senha)
         {
-            if(Email == null)
+            var dt = new DataTable();
+
+         
+            var sql = "Delete from usuarios Where Email = @Email and Senha =  @Senha";
+
+            try
             {
-                MessageBox.Show("Usuário Deletado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                using(var cn = new MySqlConnection(Conn.conn))
+                {
+                    cn.Open();
+                    using(var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@Senha", senha);
+                        cmd.Parameters.AddWithValue("@Email", Email);
+
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Usuário deletado com Sucesso", "Remoção de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("E-mail não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
-            else
+            catch (MySqlException erro)
             {
-                DataTable usuario = Usuario.GetUsuario(string email,string senha);
+                MessageBox.Show(erro.Message);
             }
+            return dt;
         }
             
             

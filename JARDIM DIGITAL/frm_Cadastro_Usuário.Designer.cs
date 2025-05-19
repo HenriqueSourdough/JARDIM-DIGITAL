@@ -250,6 +250,7 @@
             this.btnDeletar.TabIndex = 25;
             this.btnDeletar.Text = "DELETAR";
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAtualizar
             // 
@@ -262,6 +263,7 @@
             this.btnAtualizar.TabIndex = 26;
             this.btnAtualizar.Text = "ATUALIZAR";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frm_Cadastro_Usuário
             // 

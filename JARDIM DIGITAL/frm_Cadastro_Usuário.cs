@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JARDIM_DIGITAL
 {
@@ -49,7 +50,7 @@ namespace JARDIM_DIGITAL
                 {
                     Nome = tbxNome.Text,
                     Senha = tbxSenha.Text,
-                    Email = tbxEmail.Text,
+                    Email = tbxEmail.Text
                 };
 
             novoUsuario.registerUsuario();
@@ -60,13 +61,21 @@ namespace JARDIM_DIGITAL
             }
         }
 
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             Usuario usuarioDeletado = new Usuario
             {
-              Email = tbxEmail.Text
+
+                Email = tbxEmail.Text,
+                Senha = tbxSenha.Text
             };
-            usuarioDeletado.deleteUsuario();
+            // usuarioDeletado.DeletarUsuario();
+            DataTable usuario = Usuario.DeletarUsuario();
         }
     }
     
