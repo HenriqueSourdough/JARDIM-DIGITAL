@@ -68,6 +68,11 @@ namespace JARDIM_DIGITAL
             };
             usuarioDeletado.deleteUsuario();
         }
+
+        private void btnDeletar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
