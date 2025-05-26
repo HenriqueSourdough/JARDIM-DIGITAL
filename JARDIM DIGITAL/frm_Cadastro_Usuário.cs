@@ -60,19 +60,20 @@ namespace JARDIM_DIGITAL
             }
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            Usuario usuarioDeletado = new Usuario
-            {
-              Email = tbxEmail.Text
-            };
-            usuarioDeletado.deleteUsuario();
-        }
-
-        private void btnDeletar_Click_1(object sender, EventArgs e)
+        private void tbxEmail_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
+
+    private void btnDeletar(object sender, EventArgs e)
+        {
+        Usuario usuarioDeletado = new Usuario
+        {
+            Email = tbxEmail.text
+            };
+            usuarioDeletado.deleteUsuario();
+        }
+    }
     
-}
+

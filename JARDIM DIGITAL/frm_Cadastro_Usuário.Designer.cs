@@ -114,6 +114,7 @@
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(100, 13);
             this.tbxEmail.TabIndex = 11;
+            this.tbxEmail.TextChanged += new System.EventHandler(this.tbxEmail_TextChanged);
             // 
             // lblEmail
             // 
@@ -250,7 +251,6 @@
             this.btnDeletar.TabIndex = 25;
             this.btnDeletar.Text = "DELETAR";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click_1);
             // 
             // btnAtualizar
             // 
