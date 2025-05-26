@@ -70,13 +70,14 @@ namespace JARDIM_DIGITAL
         {
             Usuario usuarioDeletado = new Usuario
             {
-
                 Email = tbxEmail.Text,
                 Senha = tbxSenha.Text
             };
-            // usuarioDeletado.DeletarUsuario();
-            DataTable usuario = Usuario.DeletarUsuario();
+
+            Usuario.DeletarUsuario(usuarioDeletado.Email, usuarioDeletado.Senha);
+        }
+
         }
     }
     
-}
+
