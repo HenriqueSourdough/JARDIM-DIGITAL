@@ -12,7 +12,7 @@ namespace JARDIM_DIGITAL
     internal class Usuario
     {
 
-        public int id_suario { get; set; }
+        public int id_usuario { get; set; }
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Email { get; set; }
@@ -129,6 +129,18 @@ namespace JARDIM_DIGITAL
             }
             return dt;
         }
+        public static DataTable DeletarUsuario(string email)
+        {
+            if(Email == null)
+            {
+                MessageBox.Show("Usuário Deletado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DataTable usuario = Usuario.GetUsuario(string email,string senha);
+            }
+        }
+            
             
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cadastro_Plantas));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCriarPlanta = new System.Windows.Forms.Button();
-            this.btnLerTabela = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lblNomePlanta = new System.Windows.Forms.Label();
@@ -45,16 +44,14 @@
             this.tbxDescricaoPlanta = new System.Windows.Forms.TextBox();
             this.tbxCuidadosPlanta = new System.Windows.Forms.TextBox();
             this.tbxCategoriaPlanta = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnCadastrarPlantas = new System.Windows.Forms.PictureBox();
+            this.btnAtualizarCadastroPlantas = new System.Windows.Forms.PictureBox();
+            this.btnDeletarCadastroPlanta = new System.Windows.Forms.PictureBox();
             this.tbxLink_Imagem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCadastrarPlantas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAtualizarCadastroPlantas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeletarCadastroPlanta)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,30 +69,18 @@
             this.btnCriarPlanta.BackColor = System.Drawing.Color.DarkCyan;
             this.btnCriarPlanta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCriarPlanta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCriarPlanta.Location = new System.Drawing.Point(144, 451);
+            this.btnCriarPlanta.Location = new System.Drawing.Point(318, 469);
             this.btnCriarPlanta.Name = "btnCriarPlanta";
-            this.btnCriarPlanta.Size = new System.Drawing.Size(84, 47);
+            this.btnCriarPlanta.Size = new System.Drawing.Size(84, 23);
             this.btnCriarPlanta.TabIndex = 1;
-            this.btnCriarPlanta.Text = "CRIAR CADASTRO";
+            this.btnCriarPlanta.Text = "CADASTRAR";
             this.btnCriarPlanta.UseVisualStyleBackColor = false;
-            this.btnCriarPlanta.Click += new System.EventHandler(this.btnCriarPlanta_Click);
-            // 
-            // btnLerTabela
-            // 
-            this.btnLerTabela.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnLerTabela.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLerTabela.Location = new System.Drawing.Point(325, 451);
-            this.btnLerTabela.Name = "btnLerTabela";
-            this.btnLerTabela.Size = new System.Drawing.Size(75, 43);
-            this.btnLerTabela.TabIndex = 2;
-            this.btnLerTabela.Text = "LER TABELA";
-            this.btnLerTabela.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkCyan;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(476, 471);
+            this.button3.Location = new System.Drawing.Point(476, 469);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -106,7 +91,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.DarkCyan;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(637, 471);
+            this.button4.Location = new System.Drawing.Point(637, 469);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -210,49 +195,40 @@
             this.tbxCategoriaPlanta.Size = new System.Drawing.Size(100, 20);
             this.tbxCategoriaPlanta.TabIndex = 17;
             // 
-            // pictureBox3
+            // btnCadastrarPlantas
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(167, 500);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
+            this.btnCadastrarPlantas.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnCadastrarPlantas.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarPlantas.Image")));
+            this.btnCadastrarPlantas.Location = new System.Drawing.Point(345, 500);
+            this.btnCadastrarPlantas.Name = "btnCadastrarPlantas";
+            this.btnCadastrarPlantas.Size = new System.Drawing.Size(27, 30);
+            this.btnCadastrarPlantas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCadastrarPlantas.TabIndex = 18;
+            this.btnCadastrarPlantas.TabStop = false;
+            this.btnCadastrarPlantas.Click += new System.EventHandler(this.btnCadastrarPlantas_Click);
             // 
-            // pictureBox4
+            // btnAtualizarCadastroPlantas
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(348, 500);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
+            this.btnAtualizarCadastroPlantas.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAtualizarCadastroPlantas.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizarCadastroPlantas.Image")));
+            this.btnAtualizarCadastroPlantas.Location = new System.Drawing.Point(495, 500);
+            this.btnAtualizarCadastroPlantas.Name = "btnAtualizarCadastroPlantas";
+            this.btnAtualizarCadastroPlantas.Size = new System.Drawing.Size(39, 30);
+            this.btnAtualizarCadastroPlantas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAtualizarCadastroPlantas.TabIndex = 20;
+            this.btnAtualizarCadastroPlantas.TabStop = false;
+            this.btnAtualizarCadastroPlantas.Click += new System.EventHandler(this.btnAtualizarCadastroPlantas_Click);
             // 
-            // pictureBox5
+            // btnDeletarCadastroPlanta
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(495, 500);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(656, 499);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
+            this.btnDeletarCadastroPlanta.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDeletarCadastroPlanta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarCadastroPlanta.Image")));
+            this.btnDeletarCadastroPlanta.Location = new System.Drawing.Point(656, 499);
+            this.btnDeletarCadastroPlanta.Name = "btnDeletarCadastroPlanta";
+            this.btnDeletarCadastroPlanta.Size = new System.Drawing.Size(37, 31);
+            this.btnDeletarCadastroPlanta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDeletarCadastroPlanta.TabIndex = 21;
+            this.btnDeletarCadastroPlanta.TabStop = false;
             // 
             // tbxLink_Imagem
             // 
@@ -267,10 +243,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 564);
             this.Controls.Add(this.tbxLink_Imagem);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnDeletarCadastroPlanta);
+            this.Controls.Add(this.btnAtualizarCadastroPlantas);
+            this.Controls.Add(this.btnCadastrarPlantas);
             this.Controls.Add(this.tbxCategoriaPlanta);
             this.Controls.Add(this.tbxCuidadosPlanta);
             this.Controls.Add(this.tbxDescricaoPlanta);
@@ -284,17 +259,15 @@
             this.Controls.Add(this.lblNomePlanta);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnLerTabela);
             this.Controls.Add(this.btnCriarPlanta);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Cadastro_Plantas";
             this.Text = "frm_Cadastro_Plantas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCadastrarPlantas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAtualizarCadastroPlantas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeletarCadastroPlanta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,7 +277,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCriarPlanta;
-        private System.Windows.Forms.Button btnLerTabela;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblNomePlanta;
@@ -318,10 +290,9 @@
         private System.Windows.Forms.TextBox tbxDescricaoPlanta;
         private System.Windows.Forms.TextBox tbxCuidadosPlanta;
         private System.Windows.Forms.TextBox tbxCategoriaPlanta;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox btnCadastrarPlantas;
+        private System.Windows.Forms.PictureBox btnAtualizarCadastroPlantas;
+        private System.Windows.Forms.PictureBox btnDeletarCadastroPlanta;
         private System.Windows.Forms.TextBox tbxLink_Imagem;
     }
 }

@@ -17,9 +17,39 @@ namespace JARDIM_DIGITAL
             InitializeComponent();
         }
 
-        private void btnCriarPlanta_Click(object sender, EventArgs e)
-        {
+    
 
+
+        private void btnCadastrarPlantas_Click(object sender, EventArgs e)
+        {
+            Plantas novosPlantas = new Plantas
+            {
+
+                NOME_PLANTA = tbxNomePlanta.Text,
+                NOME_CIENTIFICO = tbxNomeCientifico.Text,
+                DESC_PLANTA = tbxDescricaoPlanta.Text,
+                CUIDADO = tbxCuidadosPlanta.Text,
+                CATEGORIA = tbxCategoriaPlanta.Text,
+
+            };
+
+            novosPlantas.registerPlanta();
+
+        }
+
+        private void btnAtualizarCadastroPlantas_Click(object sender, EventArgs e)
+        {
+            Plantas plantaAtualizada = new Plantas
+            {
+
+                NOME_PLANTA = tbxNomePlanta.Text,
+                NOME_CIENTIFICO = tbxNomeCientifico.Text,
+                DESC_PLANTA = tbxDescricaoPlanta.Text,
+                CUIDADO = tbxCuidadosPlanta.Text,
+                CATEGORIA = tbxCategoriaPlanta.Text,
+
+            };
+            plantaAtualizada.updatePlanta();
         }
 
         private void button4_Click(object sender, EventArgs e)

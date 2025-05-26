@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace JARDIM_DIGITAL
 {
-    internal class Plantas
+    public class Plantas
     {
         public int ID_PLANTA { get; set; }
         public string NOME_PLANTA { get; set; }
@@ -58,7 +58,7 @@ namespace JARDIM_DIGITAL
             return dt;
         }
 
-        public bool registerUsuario()
+        public bool registerPlanta()
         {
             var sql = "INSERT INTO plantas(NOME_PLANTA, NOME_CIENTIFICO, DESC_PLANTA, CUIDADO, CATEGORIA, IMAGEMPLANTA) VALUES (@NomePlanta, @NomeCientifico, @Descricao, @Cuidado, @Categoria,@LinkImagem)";
 
@@ -74,8 +74,8 @@ namespace JARDIM_DIGITAL
                         cmd.Parameters.AddWithValue("@NomeCientifico", this.NOME_CIENTIFICO);
                         cmd.Parameters.AddWithValue("@Descricao", this.DESC_PLANTA);
                         cmd.Parameters.AddWithValue("@Cuidado", this.CUIDADO);
-                        cmd.Parameters.AddWithValue("@Categoria", CATEGORIA);
-                        cmd.Parameters.AddWithValue("@LinkImagem", IMAGEMPLANTA);
+                        cmd.Parameters.AddWithValue("@Categoria",this. CATEGORIA);
+                        cmd.Parameters.AddWithValue("@LinkImagem", this.IMAGEMPLANTA);
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
@@ -132,11 +132,54 @@ namespace JARDIM_DIGITAL
             }
 
             return false;
-
-
-            
+                        
         }
+        public bool updatePlanta()
+        {
+            if (this.ID_PLANTA == 0)
+            {
+                MessageBox.Show("id inválido", "updatePlanta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
+            string sql = "UPDATE plantas SET NOME_PLANTA = @NomePlanta , NOME_CIENTIFICO = @NomeCientifico , DESC_PLANTA = @Descricao , CUIDADO = @Cuidado , CATEGORIA = @Categoria , @LinkImagem = IMAGEMPLANTA ";
+
+            try
+            {
+
+                using (var cn = new MySqlConnection(Conn.conn))
+                {
+                    cn.Open();
+
+                    using (var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@NomePlanta", this.NOME_PLANTA);
+                        cmd.Parameters.AddWithValue("@NomeCientifico", this.NOME_CIENTIFICO);
+                        cmd.Parameters.AddWithValue("@Descricao", this.DESC_PLANTA);
+                        cmd.Parameters.AddWithValue("@Cuidado", this.CUIDADO);
+                        cmd.Parameters.AddWithValue("@Categoria", this.CATEGORIA);
+                        cmd.Parameters.AddWithValue("@LinkImagem", this.IMAGEMPLANTA);
+
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        //ExecuteNonQuery -> quantidade de linhas afetadas
+
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Planta atualizada com sucesso", "Atualização de Plantas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                    }
+
+                }
+            }
+
+            catch (MySqlException erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            return false;
+
+        }
     }
  }
 
