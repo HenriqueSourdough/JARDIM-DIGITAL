@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/JARDIM DIGITAL/Usuario.cs
+/JARDIM DIGITAL/Tela_Inicial.Designer.cs
+/.gitignore
+/.gitignore

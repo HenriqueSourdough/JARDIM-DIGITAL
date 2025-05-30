@@ -61,7 +61,19 @@ namespace JARDIM_DIGITAL
             }
         }
 
+
+        private void tbxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAtualizar_Click(object sender, EventArgs e)
+
+        {
+
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
                Usuario usuarioAtualizado  = new Usuario
                { 
@@ -74,20 +86,25 @@ namespace JARDIM_DIGITAL
                 Usuario.AtualizarUsuario(usuarioAtualizado.Nome,usuarioAtualizado.Email, usuarioAtualizado.Senha);
             
         }
+    }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            Usuario usuarioDeletado = new Usuario
-            {
-                Email = tbxEmail.Text,
-                Senha = tbxSenha.Text
-            };
+    private void btnDeletar(object sender, EventArgs e)
+    {
+
+        Usuario usuarioDeletado = new Usuario
+         {
+             Email = tbxEmail.Text,
+            Senha = tbxSenha.Text,
+
+         };
 
             Usuario.DeletarUsuario(usuarioDeletado.Email, usuarioDeletado.Senha);
-        }
-
-
+                 
     }
 }
+
+
+        
+   
     
 
