@@ -59,7 +59,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-16, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(946, 584);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +250,10 @@
             this.btnDeletar.TabIndex = 25;
             this.btnDeletar.Text = "DELETAR";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click_1);
+
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+
+          
             // 
             // btnAtualizar
             // 
@@ -263,6 +266,7 @@
             this.btnAtualizar.TabIndex = 26;
             this.btnAtualizar.Text = "ATUALIZAR";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // frm_Cadastro_Usuário
             // 
