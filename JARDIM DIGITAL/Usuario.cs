@@ -131,7 +131,7 @@ namespace JARDIM_DIGITAL
             return dt;
         }
 
-        public static DataTable DeletarUsuario(string email)
+        public static DataTable DeletarUsuario(string email, string senha)
         {
             if(Email == null)
             {
