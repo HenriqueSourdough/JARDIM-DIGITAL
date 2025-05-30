@@ -130,6 +130,21 @@ namespace JARDIM_DIGITAL
             }
             return dt;
         }
+
+        public static DataTable DeletarUsuario(string email)
+        {
+            if(Email == null)
+            {
+                MessageBox.Show("Usuário Deletado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DataTable usuario = Usuario.GetUsuario(string email,string senha);
+            }
+        }
+            
+            
+
         public static DataTable DeletarUsuario(string Email, string Senha)
         {
             var dt = new DataTable();
@@ -165,6 +180,7 @@ namespace JARDIM_DIGITAL
 
             return dt;
         }
+
     }
             
             
