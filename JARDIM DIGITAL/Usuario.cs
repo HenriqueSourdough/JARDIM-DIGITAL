@@ -166,8 +166,46 @@ namespace JARDIM_DIGITAL
             return dt;
         }
     }
-            
-            
-    
+    public static bool AtualizarUsuario(string email, string nome, string senha)
+    {
+        var dt = new DataTable();
+        var sql = "UPDATE usuarios SET Nome = @Nome, Senha = @Senha WHERE Email = @Email";
+
+        try
+        {
+            using (var cn = new MySqlConnection(Conn.conn))
+            {
+                cn.Open();
+                using (var cmd = new MySqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Nome", nome);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        MessageBox.Show("Usuário atualizado com sucesso!", "Atualização de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+        }
+        catch (MySqlException erro)
+        {
+            MessageBox.Show("Erro ao atualizar usuário: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+    }
+
+
+
+
 }
 

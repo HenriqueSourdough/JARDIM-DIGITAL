@@ -43,7 +43,7 @@ namespace JARDIM_DIGITAL
         private void btnEntrarCadastroUsuario_Click(object sender, EventArgs e)
         {
             if (tbxSenha.Text == tbxConfirmarSenha.Text)
-            { 
+            {
 
 
                 Usuario novoUsuario = new Usuario
@@ -53,7 +53,7 @@ namespace JARDIM_DIGITAL
                     Email = tbxEmail.Text
                 };
 
-            novoUsuario.registerUsuario();
+                novoUsuario.registerUsuario();
             }
             else
             {
@@ -63,7 +63,16 @@ namespace JARDIM_DIGITAL
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+               Usuario usuarioAtualizado  = new Usuario
+               { 
+                Nome = tbxNome.Text,
+                Email = tbxEmail.Text,
+                Senha = tbxSenha.Text
+                
+               };
 
+                Usuario.AtualizarUsuario(usuarioAtualizado.Nome,usuarioAtualizado.Email, usuarioAtualizado.Senha);
+            
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -77,7 +86,8 @@ namespace JARDIM_DIGITAL
             Usuario.DeletarUsuario(usuarioDeletado.Email, usuarioDeletado.Senha);
         }
 
-        }
+
     }
+}
     
 
