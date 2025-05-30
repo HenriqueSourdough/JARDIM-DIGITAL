@@ -86,6 +86,11 @@ namespace JARDIM_DIGITAL
                 Usuario.AtualizarUsuario(usuarioAtualizado.Nome,usuarioAtualizado.Email, usuarioAtualizado.Senha);
             
         }
+
+        private void btnDeletar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     private void btnDeletar(object sender, EventArgs e)
