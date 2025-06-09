@@ -130,20 +130,7 @@ namespace JARDIM_DIGITAL
             }
             return dt;
         }
-
-        public static DataTable DeletarUsuario(string email, string senha)
-        {
-            if(Email == null)
-            {
-                MessageBox.Show("Usuário Deletado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                DataTable usuario = Usuario.GetUsuario(string email,string senha);
-            }
-        }
-            
-            
+ 
 
         public static DataTable DeletarUsuario(string Email, string Senha)
         {
@@ -182,46 +169,42 @@ namespace JARDIM_DIGITAL
         }
 
     }
-    public static bool AtualizarUsuario(string email, string nome, string senha)
+    public bool AtualizarUsuario()
     {
-        var dt = new DataTable();
-        var sql = "UPDATE usuarios SET Nome = @Nome, Senha = @Senha WHERE Email = @Email";
+        if (this.id_usuario == 0)
+        {
+            MessageBox.Show("Usuário Inválido", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
+        }
+        string sql = "UPDATE usuarios SET Nome = @Nome, Senha = @Senha where id_usuario = @id_usuario ";
 
         try
         {
             using (var cn = new MySqlConnection(Conn.conn))
             {
                 cn.Open();
+
                 using (var cmd = new MySqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", nome);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
-                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@id_usuario,", this.id_usuario);
+                    cmd.Parameters.AddWithValue("@Nome", this.Nome);
+                    cmd.Parameters.AddWithValue("@Senha", this.Senha);
+                   
 
                     int linhasAfetadas = cmd.ExecuteNonQuery();
-
                     if (linhasAfetadas > 0)
                     {
                         MessageBox.Show("Usuário atualizado com sucesso!", "Atualização de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuário não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
                     }
                 }
             }
         }
         catch (MySqlException erro)
         {
-            MessageBox.Show("Erro ao atualizar usuário: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return false;
+            MessageBox.Show(erro.Message);
         }
+        return false;
     }
-
-
-
-
 }
 

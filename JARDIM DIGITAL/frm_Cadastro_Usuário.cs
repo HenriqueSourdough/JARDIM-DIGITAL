@@ -67,46 +67,37 @@ namespace JARDIM_DIGITAL
 
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
-
-        {
-
-        }
-
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
-               Usuario usuarioAtualizado  = new Usuario
-               { 
-                Nome = tbxNome.Text,
-                Email = tbxEmail.Text,
-                Senha = tbxSenha.Text
-                
-               };
+            Usuario usuarioAtualizado = new Usuario
+            {
+                id_usuario = Convert.ToInt32(tbxidusuario.Text),
+                Nome = tbxidusuario.Text,
+                Senha = tbxSenha.Text,
+            };
+            usuarioAtualizado.AtualizarUsuario();
 
-                Usuario.AtualizarUsuario(usuarioAtualizado.Nome,usuarioAtualizado.Email, usuarioAtualizado.Senha);
-            
         }
 
         private void btnDeletar_Click_1(object sender, EventArgs e)
         {
+            Usuario usuarioDeletado = new Usuario
+            {
+                Email = tbxEmail.Text,
+                Senha = tbxSenha.Text,
+
+            };
+
+            Usuario.DeletarUsuario(usuarioDeletado.Email, usuarioDeletado.Senha);
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
 
         }
     }
-
-    private void btnDeletar(object sender, EventArgs e)
-    {
-
-        Usuario usuarioDeletado = new Usuario
-         {
-             Email = tbxEmail.Text,
-            Senha = tbxSenha.Text,
-
-         };
-
-            Usuario.DeletarUsuario(usuarioDeletado.Email, usuarioDeletado.Senha);
-                 
     }
-}
 
 
         
