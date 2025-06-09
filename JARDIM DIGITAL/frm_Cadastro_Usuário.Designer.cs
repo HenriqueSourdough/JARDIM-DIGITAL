@@ -120,7 +120,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblEmail.Location = new System.Drawing.Point(595, 342);
+            this.lblEmail.Location = new System.Drawing.Point(594, 342);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 10;
