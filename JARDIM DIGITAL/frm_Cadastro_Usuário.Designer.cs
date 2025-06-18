@@ -125,7 +125,7 @@
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "E-mail";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
+            
             // 
             // lblNome
             // 

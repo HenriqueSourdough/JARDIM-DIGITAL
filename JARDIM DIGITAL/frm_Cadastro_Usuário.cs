@@ -92,10 +92,7 @@ namespace JARDIM_DIGITAL
 
         }
 
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
     }
 
