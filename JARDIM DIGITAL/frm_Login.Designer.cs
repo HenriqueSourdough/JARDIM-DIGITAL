@@ -93,7 +93,7 @@
             this.btnRecuperarSenha.TabIndex = 3;
             this.btnRecuperarSenha.Text = "recuperar senha";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
-            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
+          
             // 
             // btnEntrarLogin
             // 
@@ -106,7 +106,7 @@
             this.btnEntrarLogin.TabIndex = 4;
             this.btnEntrarLogin.Text = "ENTRAR";
             this.btnEntrarLogin.UseVisualStyleBackColor = false;
-            this.btnEntrarLogin.Click += new System.EventHandler(this.btnEntrarLogin_Click);
+        
             // 
             // tbxEmail
             // 
@@ -136,7 +136,7 @@
             this.btnCadastreAqui.TabIndex = 7;
             this.btnCadastreAqui.Text = "CADASTRE-SE";
             this.btnCadastreAqui.UseVisualStyleBackColor = false;
-            this.btnCadastreAqui.Click += new System.EventHandler(this.btnCadastreAqui_Click);
+          
             // 
             // pictureBox5
             // 
@@ -148,7 +148,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+         
             // 
             // pictureBox3
             // 
@@ -184,7 +184,7 @@
             this.btnFechar_Login.TabIndex = 26;
             this.btnFechar_Login.Text = "X";
             this.btnFechar_Login.UseVisualStyleBackColor = false;
-            this.btnFechar_Login.Click += new System.EventHandler(this.btnFechar_Login_Click);
+         
             // 
             // tbxNovaSenha
             // 
@@ -217,7 +217,7 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Visible = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+          
             // 
             // frm_Login
             // 

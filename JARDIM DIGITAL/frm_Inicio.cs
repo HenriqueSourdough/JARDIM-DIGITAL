@@ -18,19 +18,19 @@ namespace JARDIM_DIGITAL
             
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void BtnEntrar_Click(object sender, EventArgs e)
         {
             frm_Login frm_Login = new frm_Login();
             frm_Login.Show();
             this.Hide();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnCadastro_Click(object sender, EventArgs e)
+        private void BtnCadastro_Click(object sender, EventArgs e)
         {
             frm_Cadastro_Usuário frm_Cadastro_Usuário = new frm_Cadastro_Usuário();
             frm_Cadastro_Usuário.Show();

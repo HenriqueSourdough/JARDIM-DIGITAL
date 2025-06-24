@@ -20,12 +20,12 @@ namespace JARDIM_DIGITAL
             frm_Inicio.Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void PictureBox5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEntrarLogin_Click(object sender, EventArgs e)
+        private void BtnEntrarLogin_Click(object sender, EventArgs e)
         {
             string nomeUsuario = tbxEmail.Text;
             string senhaUsuario = tbxSenha.Text;
@@ -56,19 +56,19 @@ namespace JARDIM_DIGITAL
             }
         }
 
-        private void btnCadastreAqui_Click(object sender, EventArgs e)
+        private void BtnCadastreAqui_Click(object sender, EventArgs e)
         {
             frm_Cadastro_Usuário frm_Cadastro_Usuário = new frm_Cadastro_Usuário();
             frm_Cadastro_Usuário.Show();
             this.Close();
         }
 
-        private void btnFechar_Login_Click(object sender, EventArgs e)
+        private void BtnFechar_Login_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnRecuperarSenha_Click(object sender, EventArgs e)
+        private void BtnRecuperarSenha_Click(object sender, EventArgs e)
         {
             lblNovaSenha.Visible = true;
             tbxNovaSenha.Visible = true;
@@ -101,7 +101,7 @@ namespace JARDIM_DIGITAL
         }
        
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void BtnOK_Click(object sender, EventArgs e)
 
         {
             string email = tbxEmail.Text;

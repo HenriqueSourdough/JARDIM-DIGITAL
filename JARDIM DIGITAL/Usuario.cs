@@ -10,10 +10,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JARDIM_DIGITAL
 {
+    public static class Sessao
+    {
+        public static string EmailLogado { get; set; }
+        public static string SenhaLogada { get; set; }
+    }
+
     internal class Usuario
     {
 
-        public int id_usuario { get; set; }
+        public int ID_Usuario { get; set; }
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Email { get; set; }
@@ -57,7 +63,7 @@ namespace JARDIM_DIGITAL
             return dt;
         }
 
-        public bool registerUsuario()
+        public bool RegisterUsuario()
         {
             var sql = "INSERT INTO usuarios(Nome,Senha,Email,Cep) VALUES (@Nome, @Senha,@Email,@Cep)";
 
@@ -169,42 +175,49 @@ namespace JARDIM_DIGITAL
         }
 
     }
-    public bool AtualizarUsuario()
+    public static bool AtualizarUsuario(string novoNome, string novaSenha)
     {
-        if (this.id_usuario == 0)
-        {
-            MessageBox.Show("Usuário Inválido", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return false;
-        }
-        string sql = "UPDATE usuarios SET Nome = @Nome, Senha = @Senha where id_usuario = @id_usuario ";
+        string emailAtual = Sessao.EmailLogado;
+        string senhaAtual = Sessao.SenhaLogada;
+
+        string sql = "UPDATE usuarios SET Nome = @NovoNome, Senha = @NovaSenha WHERE Email = @Email AND Senha = @Senha";
 
         try
         {
             using (var cn = new MySqlConnection(Conn.conn))
             {
                 cn.Open();
-
                 using (var cmd = new MySqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@id_usuario,", this.id_usuario);
-                    cmd.Parameters.AddWithValue("@Nome", this.Nome);
-                    cmd.Parameters.AddWithValue("@Senha", this.Senha);
-                   
+                    cmd.Parameters.AddWithValue("@NovoNome", novoNome);
+                    cmd.Parameters.AddWithValue("@NovaSenha", novaSenha);
+                    cmd.Parameters.AddWithValue("@Email", emailAtual);
+                    cmd.Parameters.AddWithValue("@Senha", senhaAtual);
 
                     int linhasAfetadas = cmd.ExecuteNonQuery();
+
                     if (linhasAfetadas > 0)
                     {
-                        MessageBox.Show("Usuário atualizado com sucesso!", "Atualização de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Sessao.SenhaLogada = novaSenha;
+
+                        MessageBox.Show("Usuário atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível atualizar os dados. Verifique as credenciais.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
                 }
             }
         }
         catch (MySqlException erro)
         {
-            MessageBox.Show(erro.Message);
+            MessageBox.Show("Erro ao atualizar usuário: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
         }
-        return false;
     }
+
+
 }
 

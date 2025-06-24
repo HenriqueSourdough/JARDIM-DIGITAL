@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,29 +19,19 @@ namespace JARDIM_DIGITAL
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFechar_CadastroUsuario_Click(object sender, EventArgs e)
+        private void BtnFechar_CadastroUsuario_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void BtnVoltar_Click(object sender, EventArgs e)
         {
             frm_Login frm_Login = new frm_Login();
             frm_Login.Show();
             this.Hide();
         }
 
-        private void btnEntrarCadastroUsuario_Click(object sender, EventArgs e)
+        private void BtnEntrarCadastroUsuario_Click(object sender, EventArgs e)
         {
             if (tbxSenha.Text == tbxConfirmarSenha.Text)
             {
@@ -53,7 +44,7 @@ namespace JARDIM_DIGITAL
                     Email = tbxEmail.Text
                 };
 
-                novoUsuario.registerUsuario();
+                novoUsuario.RegisterUsuario();
             }
             else
             {
@@ -61,25 +52,7 @@ namespace JARDIM_DIGITAL
             }
         }
 
-
-        private void tbxEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
-        {
-            Usuario usuarioAtualizado = new Usuario
-            {
-                id_usuario = Convert.ToInt32(tbxidusuario.Text),
-                Nome = tbxidusuario.Text,
-                Senha = tbxSenha.Text,
-            };
-            usuarioAtualizado.AtualizarUsuario();
-
-        }
-
-        private void btnDeletar_Click_1(object sender, EventArgs e)
+        private void BtnDeletar_Click_1(object sender, EventArgs e)
         {
             Usuario usuarioDeletado = new Usuario
             {
@@ -92,15 +65,59 @@ namespace JARDIM_DIGITAL
 
         }
 
-        private void lblEmail_Click(object sender, EventArgs e)
+        private void btnLoginCadastro_Click(object sender, EventArgs e)
         {
+
+            string email = tbxEmail.Text;
+            string senha = tbxSenha.Text;
+
+            using (var cn = new MySqlConnection(Conn.conn))
+            {
+                cn.Open();
+                string sql = "SELECT * FROM usuarios WHERE Email = @Email AND Senha = @Senha";
+                using (var cmd = new MySqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Salva os dados globais
+                            Sessao.EmailLogado = email;
+                            Sessao.SenhaLogada = senha;
+
+                            MessageBox.Show("Login realizado com sucesso!");
+
+                            // Aqui você pode abrir o menu principal ou outro form
+                            this.Hide();
+                            new frm_Login().Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("E-mail ou senha incorretos.");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+            {
+                string novoNome = tbxNome.Text;
+                string novaSenha = tbxSenha.Text;
+
+                Usuario.AtualizarUsuario(novoNome, novaSenha);
+            }
 
         }
     }
-    }
+    
+}
 
 
-        
    
     
 

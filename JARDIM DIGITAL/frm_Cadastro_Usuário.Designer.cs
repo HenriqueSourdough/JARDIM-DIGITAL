@@ -114,7 +114,6 @@
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(100, 13);
             this.tbxEmail.TabIndex = 11;
-            this.tbxEmail.TextChanged += new System.EventHandler(this.tbxEmail_TextChanged);
             // 
             // lblEmail
             // 
@@ -125,7 +124,6 @@
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "E-mail";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblNome
             // 
@@ -136,7 +134,6 @@
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 8;
             this.lblNome.Text = "Nome";
-            this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // tbxNome
             // 
@@ -158,7 +155,6 @@
             this.btnEntrarCadastroUsuario.TabIndex = 17;
             this.btnEntrarCadastroUsuario.Text = "CADASTRAR";
             this.btnEntrarCadastroUsuario.UseVisualStyleBackColor = false;
-            this.btnEntrarCadastroUsuario.Click += new System.EventHandler(this.btnEntrarCadastroUsuario_Click);
             // 
             // btnLoginCadastro
             // 
@@ -171,7 +167,7 @@
             this.btnLoginCadastro.TabIndex = 18;
             this.btnLoginCadastro.Text = "LOGIN";
             this.btnLoginCadastro.UseVisualStyleBackColor = false;
-            this.btnLoginCadastro.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnLoginCadastro.Click += new System.EventHandler(this.btnLoginCadastro_Click);
             // 
             // pictureBox2
             // 
@@ -239,7 +235,6 @@
             this.btnFechar_CadastroUsuario.TabIndex = 24;
             this.btnFechar_CadastroUsuario.Text = "X";
             this.btnFechar_CadastroUsuario.UseVisualStyleBackColor = false;
-            this.btnFechar_CadastroUsuario.Click += new System.EventHandler(this.btnFechar_CadastroUsuario_Click);
             // 
             // btnDeletar
             // 
