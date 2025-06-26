@@ -28,9 +28,9 @@ namespace JARDIM_DIGITAL
 
         private void BtnFechar_Click(object sender, EventArgs e)
         {
-             Sessao.UsuarioId = 0;
-            Sessao.NomeUsuario = null;
-            Sessao.EmailUsuario = null;
+             Sesaao.UsuarioId = 0;
+            Sesaao.NomeUsuario = null;
+            Sesaao.EmailUsuario = null;
 
             frm_Login login = new frm_Login();
             login.Show();

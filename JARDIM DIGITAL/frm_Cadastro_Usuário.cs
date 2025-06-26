@@ -21,6 +21,7 @@ namespace JARDIM_DIGITAL
 
         private void BtnFechar_CadastroUsuario_Click(object sender, EventArgs e)
         {
+        }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -93,8 +94,8 @@ namespace JARDIM_DIGITAL
                         if (reader.Read())
                         {
                             // Salva os dados globais
-                            Sessao.EmailUsuario = Email;
-                            Sessao.SenhaUsuario = Senha;
+                            Sesaao.EmailUsuario = Email;
+                            Sesaao.SenhaUsuario = Senha;
 
                             MessageBox.Show("Login realizado com sucesso!");
 
