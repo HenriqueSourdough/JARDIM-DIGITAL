@@ -94,8 +94,8 @@ namespace JARDIM_DIGITAL
                         if (reader.Read())
                         {
                             // Salva os dados globais
-                            Sesaao.EmailUsuario = Email;
-                            Sesaao.SenhaUsuario = Senha;
+                            Sessao.EmailUsuario = Email;
+                            Sessao.SenhaUsuario = Senha;
 
                             MessageBox.Show("Login realizado com sucesso!");
 

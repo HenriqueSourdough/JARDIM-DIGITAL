@@ -93,7 +93,7 @@
             this.btnRecuperarSenha.TabIndex = 3;
             this.btnRecuperarSenha.Text = "recuperar senha";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
-          
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click_1);
             // 
             // btnEntrarLogin
             // 
@@ -106,7 +106,7 @@
             this.btnEntrarLogin.TabIndex = 4;
             this.btnEntrarLogin.Text = "ENTRAR";
             this.btnEntrarLogin.UseVisualStyleBackColor = false;
-        
+            this.btnEntrarLogin.Click += new System.EventHandler(this.btnEntrarLogin_Click_1);
             // 
             // tbxEmail
             // 
@@ -123,7 +123,6 @@
             this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(100, 20);
             this.tbxSenha.TabIndex = 6;
-          
             // 
             // btnCadastreAqui
             // 
@@ -136,7 +135,7 @@
             this.btnCadastreAqui.TabIndex = 7;
             this.btnCadastreAqui.Text = "CADASTRE-SE";
             this.btnCadastreAqui.UseVisualStyleBackColor = false;
-          
+            this.btnCadastreAqui.Click += new System.EventHandler(this.btnCadastreAqui_Click_1);
             // 
             // pictureBox5
             // 
@@ -148,7 +147,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
-         
             // 
             // pictureBox3
             // 
@@ -184,7 +182,7 @@
             this.btnFechar_Login.TabIndex = 26;
             this.btnFechar_Login.Text = "X";
             this.btnFechar_Login.UseVisualStyleBackColor = false;
-         
+            this.btnFechar_Login.Click += new System.EventHandler(this.btnFechar_Login_Click_1);
             // 
             // tbxNovaSenha
             // 
@@ -217,7 +215,7 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Visible = false;
-          
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click_1);
             // 
             // frm_Login
             // 

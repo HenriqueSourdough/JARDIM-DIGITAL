@@ -20,14 +20,7 @@ namespace JARDIM_DIGITAL
             frm_Inicio.Close();
         }
 
-
-
-        private void PictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnEntrarLogin_Click(object sender, EventArgs e)
+        private void btnEntrarLogin_Click_1(object sender, EventArgs e)
         {
             string nomeUsuario = tbxEmail.Text;
             string senhaUsuario = tbxSenha.Text;
@@ -58,19 +51,14 @@ namespace JARDIM_DIGITAL
             }
         }
 
-        private void BtnCadastreAqui_Click(object sender, EventArgs e)
+        private void btnCadastreAqui_Click_1(object sender, EventArgs e)
         {
             frm_Cadastro_Usuário frm_Cadastro_Usuário = new frm_Cadastro_Usuário();
             frm_Cadastro_Usuário.Show();
             this.Close();
         }
 
-        private void BtnFechar_Login_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BtnRecuperarSenha_Click(object sender, EventArgs e)
+        private void btnRecuperarSenha_Click_1(object sender, EventArgs e)
         {
             lblNovaSenha.Visible = true;
             tbxNovaSenha.Visible = true;
@@ -99,13 +87,11 @@ namespace JARDIM_DIGITAL
 
                 }
             }
-
         }
-       
 
-        private void BtnOK_Click(object sender, EventArgs e)
-
+        private void btnOK_Click_1(object sender, EventArgs e)
         {
+
             string email = tbxEmail.Text;
             string novaSenha = tbxNovaSenha.Text;
             if (novaSenha != "")
@@ -117,17 +103,22 @@ namespace JARDIM_DIGITAL
                 //MessageBox.Show(senhaUsuario, "Formulário");
 
 
-                
 
-                    frm_Login frm_Login = new frm_Login();
-                   frm_Login.Show();
-                    this.Hide();
 
-                    lblNovaSenha.Visible = false;
-                    tbxNovaSenha.Visible = false;
+                frm_Login frm_Login = new frm_Login();
+                frm_Login.Show();
+                this.Hide();
+
+                lblNovaSenha.Visible = false;
+                tbxNovaSenha.Visible = false;
                 btnOK.Visible = false;
-               
+
             }
+        }
+
+        private void btnFechar_Login_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

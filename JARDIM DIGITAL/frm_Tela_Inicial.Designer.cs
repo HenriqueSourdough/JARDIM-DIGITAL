@@ -1,4 +1,7 @@
-﻿namespace JARDIM_DIGITAL
+﻿using System.Windows.Forms;
+using System;
+
+namespace JARDIM_DIGITAL
 {
     partial class frm_Tela_Inicial
     {
@@ -20,6 +23,22 @@
             base.Dispose(disposing);
         }
 
+
+        private void frm_Tela_Inicial_Load(object sender, EventArgs e)
+        {
+            if (Sessao.UsuarioId == 0)
+            {
+                MessageBox.Show("Você precisa estar logado para acessar essa tela.", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                frm_Tela_Inicial login = new frm_Tela_Inicial();
+                login.Show();
+            }
+            else
+            {
+                lblBoasVindas.Text = "Olá, " + Sessao.NomeUsuario;
+            }
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -33,10 +52,10 @@
             this.btnTelaInicial = new System.Windows.Forms.Button();
             this.btnHomeCatalogoPlantas = new System.Windows.Forms.Button();
             this.btnHomeMenu = new System.Windows.Forms.Button();
-            this.tbxBemVindo = new System.Windows.Forms.TextBox();
             this.tbxPesquisarTelaInicial = new System.Windows.Forms.TextBox();
             this.imgLupa = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.lblBoasVindas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoTelaInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLupa)).BeginInit();
             this.SuspendLayout();
@@ -88,15 +107,6 @@
             this.btnHomeMenu.TabIndex = 3;
             this.btnHomeMenu.UseVisualStyleBackColor = false;
             // 
-            // tbxBemVindo
-            // 
-            this.tbxBemVindo.BackColor = System.Drawing.Color.Teal;
-            this.tbxBemVindo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxBemVindo.Location = new System.Drawing.Point(468, 391);
-            this.tbxBemVindo.Name = "tbxBemVindo";
-            this.tbxBemVindo.Size = new System.Drawing.Size(146, 13);
-            this.tbxBemVindo.TabIndex = 4;
-            // 
             // tbxPesquisarTelaInicial
             // 
             this.tbxPesquisarTelaInicial.BackColor = System.Drawing.Color.Teal;
@@ -129,23 +139,33 @@
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // Tela_Inicial
+            // lblBoasVindas
+            // 
+            this.lblBoasVindas.AutoSize = true;
+            this.lblBoasVindas.Location = new System.Drawing.Point(487, 131);
+            this.lblBoasVindas.Name = "lblBoasVindas";
+            this.lblBoasVindas.Size = new System.Drawing.Size(58, 13);
+            this.lblBoasVindas.TabIndex = 8;
+            this.lblBoasVindas.Text = "Bem-Vindo";
+          
+            // 
+            // frm_Tela_Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1114, 626);
+            this.Controls.Add(this.lblBoasVindas);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.imgLupa);
             this.Controls.Add(this.tbxPesquisarTelaInicial);
-            this.Controls.Add(this.tbxBemVindo);
             this.Controls.Add(this.btnHomeMenu);
             this.Controls.Add(this.btnHomeCatalogoPlantas);
             this.Controls.Add(this.btnTelaInicial);
             this.Controls.Add(this.LogoTelaInicial);
             this.DoubleBuffered = true;
-            this.Name = "Tela_Inicial";
+            this.Name = "frm_Tela_Inicial";
             this.Text = "Tela_Inicial";
             ((System.ComponentModel.ISupportInitialize)(this.LogoTelaInicial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLupa)).EndInit();
@@ -160,9 +180,9 @@
         private System.Windows.Forms.Button btnTelaInicial;
         private System.Windows.Forms.Button btnHomeCatalogoPlantas;
         private System.Windows.Forms.Button btnHomeMenu;
-        private System.Windows.Forms.TextBox tbxBemVindo;
         private System.Windows.Forms.TextBox tbxPesquisarTelaInicial;
         private System.Windows.Forms.PictureBox imgLupa;
         private System.Windows.Forms.Button button4;
+        private Label lblBoasVindas;
     }
 }

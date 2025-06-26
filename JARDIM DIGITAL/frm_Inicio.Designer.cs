@@ -59,7 +59,7 @@
             this.btnEntrar.TabIndex = 10;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
-           
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
             // 
             // btnCadastro
             // 
@@ -72,7 +72,7 @@
             this.btnCadastro.TabIndex = 11;
             this.btnCadastro.Text = "CADASTRE-SE";
             this.btnCadastro.UseVisualStyleBackColor = false;
-         
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
             // 
             // pictureBox2
             // 
@@ -95,7 +95,7 @@
             this.btnFechar.TabIndex = 13;
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = false;
-        
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
             // 
             // frm_Inicio
             // 
