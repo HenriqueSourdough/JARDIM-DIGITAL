@@ -47,7 +47,7 @@ namespace JARDIM_DIGITAL
                 {
                     //saber se o Banco de Dados foi Acessado
 
-                    Tela_Inicial tela_Inicial = new Tela_Inicial();
+                    frm_Tela_Inicial tela_Inicial = new frm_Tela_Inicial();
                     tela_Inicial.Show();
                     this.Hide();
                 }

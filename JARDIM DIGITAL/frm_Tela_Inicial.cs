@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JARDIM_DIGITAL
 {
-    public partial class Tela_Inicial : Form
+    public partial class frm_Tela_Inicial : Form
     {
-        public Tela_Inicial()
+        public frm_Tela_Inicial()
         {
             InitializeComponent();
         }
