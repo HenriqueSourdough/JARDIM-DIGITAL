@@ -136,7 +136,7 @@
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 8;
             this.lblNome.Text = "Nome";
-            this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
+            
             // 
             // tbxNome
             // 

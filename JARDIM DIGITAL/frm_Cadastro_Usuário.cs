@@ -18,15 +18,7 @@ namespace JARDIM_DIGITAL
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void btnFechar_CadastroUsuario_Click(object sender, EventArgs e)
         {
