@@ -66,15 +66,12 @@
             this.panel1.Controls.Add(this.lblBoasVindas);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnCatalogoPlantas);
             this.panel1.Controls.Add(this.btnMenuInicial);
             this.panel1.Controls.Add(this.btnFechar_TelaInicial);
+            this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(-2, -12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1021, 655);
@@ -206,7 +203,8 @@
             this.btnMenuInicial.BackColor = System.Drawing.Color.Teal;
             this.btnMenuInicial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMenuInicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuInicial.Location = new System.Drawing.Point(328, 558);
+            this.btnMenuInicial.ForeColor = System.Drawing.Color.Teal;
+            this.btnMenuInicial.Location = new System.Drawing.Point(393, 549);
             this.btnMenuInicial.Name = "btnMenuInicial";
             this.btnMenuInicial.Size = new System.Drawing.Size(58, 46);
             this.btnMenuInicial.TabIndex = 2;
@@ -218,7 +216,7 @@
             this.btnFechar_TelaInicial.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnFechar_TelaInicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar_TelaInicial.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar_TelaInicial.Location = new System.Drawing.Point(976, 24);
+            this.btnFechar_TelaInicial.Location = new System.Drawing.Point(983, 15);
             this.btnFechar_TelaInicial.Name = "btnFechar_TelaInicial";
             this.btnFechar_TelaInicial.Size = new System.Drawing.Size(20, 23);
             this.btnFechar_TelaInicial.TabIndex = 1;
@@ -254,18 +252,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFechar_TelaInicial;
         private System.Windows.Forms.Button btnMenuInicial;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCatalogoPlantas;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblBoasVindas;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox imgLogoTelaInicial;
     }
 }
