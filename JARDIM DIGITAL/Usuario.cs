@@ -10,12 +10,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JARDIM_DIGITAL
 {
-    public static class Sessao
-    {
-        public static string EmailLogado { get; set; }
-        public static string SenhaLogada { get; set; }
-    }
-
     internal class Usuario
     {
 
@@ -23,14 +17,13 @@ namespace JARDIM_DIGITAL
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Email { get; set; }
-        public string CEP { get; set; }
         public string NovaSenha {  get; set; }
 
         public static DataTable GetUsuario(string Email, string senha)
         {
             var dt = new DataTable();
-            var sql = "SELECT id_usuario, Nome, Senha, Email,CEP FROM usuarios WHERE Email = @Email AND Senha = @Senha ";
-           
+            var sql = "SELECT * FROM usuarios WHERE email = @Email AND senha = @Senha";
+
 
 
             try// Tentar
@@ -42,7 +35,7 @@ namespace JARDIM_DIGITAL
                     using (var cmd = new MySqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@Email", Email);
-                        cmd.Parameters.AddWithValue("@Senha", senha);
+                        cmd.Parameters.AddWithValue("@Senha", Seguranca.GerarHashSHA1(senha));
                         //MessageBox.Show(nome,"Banco de Dados");
                         //MessageBox.Show(senha,"Banco de Dados");
 
@@ -65,7 +58,7 @@ namespace JARDIM_DIGITAL
 
         public bool RegisterUsuario()
         {
-            var sql = "INSERT INTO usuarios(Nome,Senha,Email,Cep) VALUES (@Nome, @Senha,@Email,@Cep)";
+            var sql = "INSERT INTO usuarios(Nome,Senha,Email) VALUES (@Nome, @Senha,@Email)";
 
 
             try// Tentar
@@ -77,9 +70,9 @@ namespace JARDIM_DIGITAL
                     using (var cmd = new MySqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@Nome", this.Nome);
-                        cmd.Parameters.AddWithValue("@Senha", this.Senha);
+                        cmd.Parameters.AddWithValue("@Senha", Seguranca.GerarHashSHA1(this.Senha));
                         cmd.Parameters.AddWithValue("@Email", this.Email);
-                        cmd.Parameters.AddWithValue("@Cep", this.CEP);
+                      
 
                         //ENQ Retorno de quantidade de linhas Afetadas 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
@@ -115,7 +108,7 @@ namespace JARDIM_DIGITAL
                     using(var cmd = new MySqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@NovaSenha", novaSenha);
+                        cmd.Parameters.AddWithValue("@NovaSenha", Seguranca.GerarHashSHA1(novaSenha));
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
@@ -151,7 +144,7 @@ namespace JARDIM_DIGITAL
                     using (var cmd = new MySqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@Email", Email);
-                        cmd.Parameters.AddWithValue("@Senha", Senha);
+                        cmd.Parameters.AddWithValue("@Senha",Seguranca.GerarHashSHA1(Senha));
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
 
@@ -175,49 +168,51 @@ namespace JARDIM_DIGITAL
         }
 
     }
-    public static bool AtualizarUsuario(string novoNome, string novaSenha)
+    public bool updateUsuario()
     {
-        string emailAtual = Sessao.EmailLogado;
-        string senhaAtual = Sessao.SenhaLogada;
+        if (this.ID_Usuario == 0)
+        {
+            MessageBox.Show("Usuário inválido", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
+        }
 
-        string sql = "UPDATE usuarios SET Nome = @NovoNome, Senha = @NovaSenha WHERE Email = @Email AND Senha = @Senha";
+        string sql = "UPDATE usuarios SET Nome = @Nome, Email = @Email, Senha = @Senha WHERE ID_Usuario = @ID_Usuario";
 
         try
         {
             using (var cn = new MySqlConnection(Conn.conn))
             {
                 cn.Open();
+
                 using (var cmd = new MySqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@NovoNome", novoNome);
-                    cmd.Parameters.AddWithValue("@NovaSenha", novaSenha);
-                    cmd.Parameters.AddWithValue("@Email", emailAtual);
-                    cmd.Parameters.AddWithValue("@Senha", senhaAtual);
+                    cmd.Parameters.AddWithValue("@ID_Usuario", this.ID_Usuario);
+                    cmd.Parameters.AddWithValue("@Nome", this.Nome);
+                    cmd.Parameters.AddWithValue("@Email", this.Email);
+                    cmd.Parameters.AddWithValue("@Senha", Seguranca.GerarHashSHA1(this.Senha));
 
+                    //ENQ Retorno qntidade de linhas afetadas
                     int linhasAfetadas = cmd.ExecuteNonQuery();
-
                     if (linhasAfetadas > 0)
                     {
-                        Sessao.SenhaLogada = novaSenha;
-
-                        MessageBox.Show("Usuário atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário atualizado com sucesso", "Atualização de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
-                    else
-                    {
-                        MessageBox.Show("Não foi possível atualizar os dados. Verifique as credenciais.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
+
                 }
+
             }
         }
         catch (MySqlException erro)
         {
-            MessageBox.Show("Erro ao atualizar usuário: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return false;
+            MessageBox.Show(erro.Message);
         }
+        return false;
+
     }
 
-
 }
+
+
+
 

@@ -48,6 +48,7 @@
             this.btnFechar_CadastroUsuario = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.tbxID_Usuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -259,13 +260,23 @@
             this.btnAtualizar.TabIndex = 26;
             this.btnAtualizar.Text = "ATUALIZAR";
             this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // tbxID_Usuario
+            // 
+            this.tbxID_Usuario.BackColor = System.Drawing.Color.MintCream;
+            this.tbxID_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxID_Usuario.Location = new System.Drawing.Point(393, 342);
+            this.tbxID_Usuario.Name = "tbxID_Usuario";
+            this.tbxID_Usuario.Size = new System.Drawing.Size(100, 13);
+            this.tbxID_Usuario.TabIndex = 27;
             // 
             // frm_Cadastro_Usuário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 583);
+            this.Controls.Add(this.tbxID_Usuario);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnFechar_CadastroUsuario);
@@ -319,5 +330,6 @@
         private System.Windows.Forms.Button btnFechar_CadastroUsuario;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.TextBox tbxID_Usuario;
     }
 }

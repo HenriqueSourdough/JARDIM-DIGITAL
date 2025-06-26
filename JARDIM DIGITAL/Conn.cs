@@ -9,7 +9,7 @@ namespace JARDIM_DIGITAL
     internal class Conn
     {
         private const string servidor = "127.0.0.1"; // locahost ou 127.0.0.1
-        private const string bancoDados = "jardimdigital";
+        private const string bancoDados = "jardim_digital";
         private const string usuario = "root";
         private const string senha = "";
 

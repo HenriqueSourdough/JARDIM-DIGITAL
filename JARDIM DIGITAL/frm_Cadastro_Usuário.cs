@@ -68,8 +68,8 @@ namespace JARDIM_DIGITAL
         private void btnLoginCadastro_Click(object sender, EventArgs e)
         {
 
-            string email = tbxEmail.Text;
-            string senha = tbxSenha.Text;
+            string Email = tbxEmail.Text;
+            string Senha = tbxSenha.Text;
 
             using (var cn = new MySqlConnection(Conn.conn))
             {
@@ -77,16 +77,16 @@ namespace JARDIM_DIGITAL
                 string sql = "SELECT * FROM usuarios WHERE Email = @Email AND Senha = @Senha";
                 using (var cmd = new MySqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    cmd.Parameters.AddWithValue("@Email", Email);
+                    cmd.Parameters.AddWithValue("@Senha", Senha);
 
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             // Salva os dados globais
-                            Sessao.EmailLogado = email;
-                            Sessao.SenhaLogada = senha;
+                            Sessao.EmailUsuario = Email;
+                            Sessao.SenhaUsuario = Senha;
 
                             MessageBox.Show("Login realizado com sucesso!");
 
@@ -101,23 +101,26 @@ namespace JARDIM_DIGITAL
                     }
                 }
             }
+
         }
 
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
+
+            Usuario usuarioAtualizado = new Usuario
             {
-                string novoNome = tbxNome.Text;
-                string novaSenha = tbxSenha.Text;
+                ID_Usuario = Convert.ToInt32(tbxID_Usuario.Text),
+                Nome = tbxNome.Text,
+                Senha = tbxSenha.Text,
+            };
 
-                Usuario.AtualizarUsuario(novoNome, novaSenha);
-            }
-
+            usuarioAtualizado.updateUsuario();
         }
     }
-    
 }
 
 
-   
-    
+
+
+
 
