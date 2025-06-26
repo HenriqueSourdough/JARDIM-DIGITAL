@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JARDIM_DIGITAL
 {
-    public static class Sessao
+    public static class Sesaao
     {
         // Variáveis privadas (campos)
         private static int _usuarioId;
